@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ar.com.vmiglesias</groupId>
+  <artifactId>evil-mutants</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>evil-mutants</name>
+  <description>Project for detect dna mutant.</description>
+  <modules>
+  	<module>evil-mutants-app</module>
+  	<module>evil-mutants-api</module>
+  	<module>evil-mutants-config</module>
+  	<module>evil-mutants-impl</module>
+  </modules>
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+        	
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>fluent-hc</artifactId>
+                <version>4.5.9</version>
+            </dependency>
+            
+            <dependency>
+            	<artifactId>evil-mutants-config</artifactId>
+            	<groupId>ar.com.vmiglesias</groupId>
+            	<version>${project.version}</version>
+            </dependency>
+            <dependency>
+            	<artifactId>evil-mutants-app</artifactId>
+            	<groupId>ar.com.vmiglesias</groupId>
+            	<version>${project.version}</version>
+            </dependency>
+            <dependency>
+            	<artifactId>evil-mutants-impl</artifactId>
+            	<groupId>ar.com.vmiglesias</groupId>
+            	<version>${project.version}</version>
+            </dependency>
+            <dependency>
+            	<artifactId>evil-mutants-config</artifactId>
+            	<groupId>ar.com.vmiglesias</groupId>
+            	<version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+  
+</project>
